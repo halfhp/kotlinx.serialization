@@ -30,7 +30,7 @@ typealias DateAsText = @Serializable(DateAsSimpleTextSerializer::class) Date
 class ProgrammingLanguage(val stableReleaseDate: DateAsText, val lastReleaseTimestamp: DateAsLong)
 
 fun main() {
-    val format = SimpleDateFormat("yyyy-MM-dd")
-    val data = ProgrammingLanguage(format.parse("2016-02-15"), format.parse("2022-07-07"))
+    val format = SimpleDateFormat("yyyy-MM-ddX")
+    val data = ProgrammingLanguage(format.parse("2016-02-15+00"), format.parse("2022-07-07+00"))
     println(Json.encodeToString(data))
 }

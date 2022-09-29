@@ -851,8 +851,8 @@ Using these new different types, it is possible to serialize a Date differently 
 class ProgrammingLanguage(val stableReleaseDate: DateAsText, val lastReleaseTimestamp: DateAsLong)
 
 fun main() {
-    val format = SimpleDateFormat("yyyy-MM-dd")
-    val data = ProgrammingLanguage(format.parse("2016-02-15"), format.parse("2022-07-07"))
+    val format = SimpleDateFormat("yyyy-MM-ddX")
+    val data = ProgrammingLanguage(format.parse("2016-02-15+00"), format.parse("2022-07-07+00"))
     println(Json.encodeToString(data))
 }
 ```
@@ -860,7 +860,7 @@ fun main() {
 > You can get the full code [here](../guide/example/example-serializer-17.kt).
 
 ```text
-{"stableReleaseDate":"2016-02-15","lastReleaseTimestamp":1657144800000}
+{"stableReleaseDate":"2016-02-15","lastReleaseTimestamp":1657152000000}
 ```
 
 <!--- TEST -->
