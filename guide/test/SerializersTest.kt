@@ -120,7 +120,7 @@ class SerializersTest {
     @Test
     fun testExampleSerializer17() {
         captureOutput("ExampleSerializer17") { example.exampleSerializer17.main() }.verifyOutputLines(
-            "{\"stableReleaseDate\":\"2016-02-15+01\",\"lastReleaseTimestamp\":1657152000000}"
+            "{\"stableReleaseDate\":\"2016-02-15\",\"lastReleaseTimestamp\":1657144800000}"
         )
     }
 
